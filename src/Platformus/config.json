@@ -1,0 +1,7 @@
+﻿{
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Data Source=host;Initial Catalog=db;MultipleActiveResultSets=True;Persist Security Info=True;User ID=user;Password=password"
+    }
+  }
+}

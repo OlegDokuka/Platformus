@@ -1,0 +1,45 @@
+﻿@import '_platformus.variables.scss';
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+}
+
+.header .cultures {
+  background: #f5f5f5;
+  line-height: 30px;
+  padding: 0 20px;
+}
+
+.header .cultures .culture {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.header .menu {
+  background: #f0f0f0;
+  line-height: 30px;
+  padding: 0 20px;
+}
+
+.header .menu .menu-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.footer {
+  background: #f0f0f0;
+  line-height: 30px;
+  padding: 0 20px;
+}

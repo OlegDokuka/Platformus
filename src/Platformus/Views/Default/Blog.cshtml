@@ -1,0 +1,15 @@
+﻿@* Copyright © 2015 Dmitry Sikorsky. All rights reserved. *@
+@* Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information. *@
+@model Platformus.ViewModels.Shared.ObjectViewModel
+@{ 
+  this.ViewBag.Title = this.Model.Properties["Title"].Html;
+  this.ViewBag.MetaKeywords = this.Model.Properties["MetaKeywords"].Html;
+  this.ViewBag.MetaDescription = this.Model.Properties["MetaDescription"].Html;
+}
+
+@Html.Raw(this.Model.Properties["Content"].Html)
+
+@foreach (var blogPost in this.Model.DataSources["BlogPosts"].Objects)
+{
+  @Html.Partial("_BlogPost", blogPost)
+}

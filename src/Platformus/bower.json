@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "jquery": "^1.11.3",
+    "jquery-validation": "^1.14.0",
+    "jquery-validation-unobtrusive": "^3.2.2",
+    "tinymce": "^4.2.1"
+  },
+  "name": "Platformus",
+  "private": true
+}

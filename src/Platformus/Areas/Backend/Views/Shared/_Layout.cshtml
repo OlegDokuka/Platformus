@@ -1,0 +1,76 @@
+﻿@* Copyright © 2015 Dmitry Sikorsky. All rights reserved. *@
+@* Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information. *@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>@ViewBag.Title</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link href="~/areas/backend/css/platformus.min.css" rel="stylesheet" />
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic&subset=latin,cyrillic" type="text/css" rel="stylesheet" />
+  <script src="~/lib/jquery/jquery.min.js"></script>
+  @*<script src="~/lib/jquery-validation/jquery.validate.min.js"></script>
+  <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>*@
+  <script src="~/lib/jquery/jquery.min.js"></script>
+  <script src="~/lib/tinymce/tinymce.min.js"></script>
+  <script src="~/areas/backend/js/platformus.min.js"></script>
+</head>
+<body>
+  <div class="container with-side @(this.ViewBag.HasSideDetails == null ? null : "with-side-details")">
+    <div class="side">
+      <a class="platformus" href="/backend/">
+        Platformus<span>.net</span></a>
+      <div class="menu">
+        <div class="menu-group">
+          <div class="name">
+            Content
+          </div>
+          <div class="menu-items">
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "objects" ? "active" : null)" href="/backend/objects">
+              Objects</a>
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "menus" ? "active" : null)" href="/backend/menus">
+              Menus</a>
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "forms" ? "active" : null)" href="/backend/forms">
+              Forms</a>
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "files" ? "active" : null)" href="/backend/files">
+              Files</a>
+          </div>
+        </div>
+        <div class="menu-group">
+          <div class="name">
+            Settings
+          </div>
+          <div class="menu-items">
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "cultures" ? "active" : null)" href="/backend/cultures">
+              Cultures</a>
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "datatypes" ? "active" : null)" href="/backend/datatypes">
+              Data Types</a>
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "classes" ? "active" : null)" href="/backend/classes">
+              Classes</a>
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "configurations" ? "active" : null)" href="/backend/configurations">
+              Configurations</a>
+          </div>
+        </div>
+        <div class="menu-group">
+          <div class="name">
+            Audience
+          </div>
+          <div class="menu-items">
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "permissions" ? "active" : null)" href="/backend/permissions">
+              Permissions</a>
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "roles" ? "active" : null)" href="/backend/roles">
+              Roles</a>
+            <a class="menu-item @(this.ViewBag.ActiveMenuItem == "users" ? "active" : null)" href="/backend/users">
+              Users</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    @RenderSection("sideDetails", false)
+    <div class="content">
+      @RenderBody()
+    </div>
+  </div>
+</body>
+</html>
