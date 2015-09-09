@@ -44,19 +44,19 @@ namespace Platformus.Data.EntityFramework.Sqlite
     {
       this.dbContext.Database.ExecuteSqlCommand(
         @"
-          CREATE TABLE #MenuItems (Id INT PRIMARY KEY);
-          INSERT INTO #MenuItems VALUES ({0});
+          CREATE TEMP TABLE TempMenuItems (Id INT PRIMARY KEY);
+          INSERT INTO TempMenuItems VALUES ({0});
           WHILE @@ROWCOUNT > 0
-            INSERT INTO #MenuItems 
+            INSERT INTO TempMenuItems 
               SELECT DISTINCT MenuItems.Id 
               FROM MenuItems
-              INNER JOIN #MenuItems ON MenuItems.MenuItemId = #MenuItems.Id
-              WHERE MenuItems.Id NOT IN (SELECT Id FROM #MenuItems);
-          CREATE TABLE #Dictionaries (Id INT PRIMARY KEY);
-          INSERT INTO #Dictionaries SELECT NameId FROM MenuItems WHERE Id IN (SELECT Id FROM #MenuItems);
-          DELETE FROM MenuItems WHERE Id IN (SELECT Id FROM #MenuItems);
-          DELETE FROM Localizations WHERE DictionaryId IN (SELECT Id FROM #Dictionaries);
-          DELETE FROM Dictionaries WHERE Id IN (SELECT Id FROM #Dictionaries);
+              INNER JOIN TempMenuItems ON MenuItems.MenuItemId = TempMenuItems.Id
+              WHERE MenuItems.Id NOT IN (SELECT Id FROM TempMenuItems);
+          CREATE TEMP TABLE TempDictionaries (Id INT PRIMARY KEY);
+          INSERT INTO TempDictionaries SELECT NameId FROM MenuItems WHERE Id IN (SELECT Id FROM TempMenuItems);
+          DELETE FROM MenuItems WHERE Id IN (SELECT Id FROM TempMenuItems);
+          DELETE FROM Localizations WHERE DictionaryId IN (SELECT Id FROM TempDictionaries);
+          DELETE FROM Dictionaries WHERE Id IN (SELECT Id FROM TempDictionaries);
         ",
         menuItem.Id
       );

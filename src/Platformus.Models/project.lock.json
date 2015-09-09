@@ -3,12 +3,6 @@
   "version": 1,
   "targets": {
     "DNX,Version=v4.5.1": {
-      "Platformus.Models/0.1.1": {
-        "type": "project",
-        "dependencies": {
-          "System.Runtime": "4.0.0"
-        }
-      },
       "System.Runtime/4.0.0": {
         "type": "package",
         "compile": {
@@ -20,12 +14,6 @@
       }
     },
     "DNXCore,Version=v5.0": {
-      "Platformus.Models/0.1.1": {
-        "type": "project",
-        "dependencies": {
-          "System.Runtime": "4.0.0"
-        }
-      },
       "System.Runtime/4.0.0": {
         "type": "package",
         "compile": {
@@ -35,10 +23,6 @@
     }
   },
   "libraries": {
-    "Platformus.Models/0.1.1": {
-      "type": "project",
-      "path": "../Platformus.Models/project.json"
-    },
     "System.Runtime/4.0.0": {
       "type": "package",
       "sha512": "Uq9epame8hEqJlj4KaWb67dDJvj4IM37jRFGVeFbugRdPz48bR0voyBhrbf3iSa2tAmlkg4lsa6BUOL9iwlMew==",
@@ -90,7 +74,6 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Platformus.Models >= 0.1.1",
       "System.Runtime >= 4.0.0"
     ],
     "DNX,Version=v4.5.1": [],

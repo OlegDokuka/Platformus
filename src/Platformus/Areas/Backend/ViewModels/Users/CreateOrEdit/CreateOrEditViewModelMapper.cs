@@ -21,7 +21,7 @@ namespace Platformus.Areas.Backend.ViewModels.Users
       if (createOrEdit.Id != null)
         user = this.handler.Storage.GetRepository<IUserRepository>().WithKey((int)createOrEdit.Id);
 
-      else user.Created = DateTime.Now;
+      else user.Created = DateTime.Now.ToUnixTimestamp();
 
       user.Name = createOrEdit.Name;
       return user;

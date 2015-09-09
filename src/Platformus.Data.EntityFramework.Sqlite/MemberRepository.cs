@@ -55,11 +55,11 @@ namespace Platformus.Data.EntityFramework.Sqlite
       this.dbContext.Database.ExecuteSqlCommand(
         @"
           DELETE FROM CachedObjects WHERE ClassId IN (SELECT ClassId FROM Members WHERE Id = {0});
-          CREATE TABLE #Dictionaries (Id INT PRIMARY KEY);
-          INSERT INTO #Dictionaries SELECT HtmlId FROM Properties WHERE MemberId = {0};
+          CREATE TEMP TABLE TempDictionaries (Id INT PRIMARY KEY);
+          INSERT INTO TempDictionaries SELECT HtmlId FROM Properties WHERE MemberId = {0};
           DELETE FROM Properties WHERE MemberId = {0};
-          DELETE FROM Localizations WHERE DictionaryId IN (SELECT Id FROM #Dictionaries);
-          DELETE FROM Dictionaries WHERE Id IN (SELECT Id FROM #Dictionaries);
+          DELETE FROM Localizations WHERE DictionaryId IN (SELECT Id FROM TempDictionaries);
+          DELETE FROM Dictionaries WHERE Id IN (SELECT Id FROM TempDictionaries);
         ",
         member.Id
       );

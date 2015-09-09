@@ -1,2 +1,7 @@
 .svn/
+.vs/
 *.licenseheader
+platformus.sqlite
+*.user
+src/Platformus/config.json
+src/Platformus/config.json

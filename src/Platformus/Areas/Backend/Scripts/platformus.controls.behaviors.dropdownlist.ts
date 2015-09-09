@@ -57,7 +57,7 @@ module Platformus.Controls.Behaviors.DropDownList {
       dropDownListItems = dropDownListItem.parent(),
       dropDownList = dropDownListItems.parent();
 
-    dropDownList.val(dropDownListItem.data("value"));
+    dropDownList.val(<any>dropDownListItem.data("value"));
     dropDownListItems.fadeOut("fast");
     return false;
   }

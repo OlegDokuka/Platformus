@@ -1,4 +1,4 @@
-# Platformus
+# Platformus 0.1.1
 
 ## Introduction
 
@@ -14,12 +14,13 @@ For example, let’s say we have Developer class and Team class. Also, we can have
 
 ## Quick start
 
+0. Install Visual Studio 2015 and asp.net 5 preview (beta7) from http://www.asp.net/vnext.
 1. Open the solution (Platformus.sln) with Visual Studio 2015.
 2. Wait until all dependencies are loaded.
 3. Open Task Runner Explorer window.
 4. Run “lib” task.
-5. Run “rebuild” task (using TypeScript version 1.5).
-6. Go to “Platformus\Startup.cs” and uncomment “*.Sqlite” or “*.SqlServer” (depending on the database you want to use).
+5. Run “rebuild” task.
+6. Go to “Platformus\Startup.cs” and uncomment “using Platformus.Data.EntityFramework.Sqlite” or “using Platformus.Data.EntityFramework.SqlServer” (depending on the database you want to use).
 7. Go to “Platformus\config.json” and specify the connection string to your database (for Sqlite it is only “Data Source=filename”).
 8. Use “sqlserver.sql” or “sqlite.sql” script to create the database or to fill it with test data.
 9. Run the web app.
@@ -27,4 +28,5 @@ For example, let’s say we have Developer class and Team class. Also, we can have
 ## Links
 
 Website: http://platformus.net/ (under construction)
+
 Docs: http://docs.platformus.net/

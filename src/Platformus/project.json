@@ -16,10 +16,10 @@
     "Microsoft.Framework.Configuration.Json": "1.0.0-beta7",
     "Microsoft.Framework.Globalization.CultureInfoCache": "1.0.0-beta7",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta7",
-    "Platformus.Data": "0.1.0",
-    "Platformus.Data.EntityFramework.Sqlite": "0.1.0",
-    "Platformus.Data.EntityFramework.SqlServer": "0.1.0",
-    "Platformus.Models": "0.1.0"
+    "Platformus.Data": "0.1.1",
+    "Platformus.Data.EntityFramework.Sqlite": "0.1.1",
+    "Platformus.Data.EntityFramework.SqlServer": "0.1.1",
+    "Platformus.Models": "0.1.1"
   },
   "exclude": [
     "wwwroot",
@@ -41,6 +41,6 @@
     "**.user",
     "**.vspscc"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "webroot": "wwwroot"
 }

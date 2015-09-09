@@ -42,7 +42,7 @@ module Platformus.Overlays {
         return null;
       }
 
-      return selectedRow.data("fileName");
+      return <any>selectedRow.data("fileName");
     }
   }
 }

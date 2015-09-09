@@ -18,7 +18,7 @@ namespace Platformus.Areas.Backend.ViewModels.Shared
       {
         Id = user.Id,
         Name = user.Name,
-        Created = user.Created
+        Created = user.Created.ToDateTime()
       };
     }
   }

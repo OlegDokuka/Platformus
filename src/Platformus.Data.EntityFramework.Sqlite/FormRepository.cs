@@ -45,15 +45,15 @@ namespace Platformus.Data.EntityFramework.Sqlite
       this.dbContext.Database.ExecuteSqlCommand(
         @"
           DELETE FROM CachedForms WHERE FormId = {0};
-          CREATE TABLE #Dictionaries (Id INT PRIMARY KEY);
-          INSERT INTO #Dictionaries SELECT ValueId FROM FieldOptions WHERE FieldId IN (SELECT Id FROM Fields WHERE FormId = {0});
-          INSERT INTO #Dictionaries SELECT NameId FROM Fields WHERE FormId = {0};
-          INSERT INTO #Dictionaries SELECT NameId FROM Forms WHERE Id = {0};
+          CREATE TEMP TABLE TempDictionaries (Id INT PRIMARY KEY);
+          INSERT INTO TempDictionaries SELECT ValueId FROM FieldOptions WHERE FieldId IN (SELECT Id FROM Fields WHERE FormId = {0});
+          INSERT INTO TempDictionaries SELECT NameId FROM Fields WHERE FormId = {0};
+          INSERT INTO TempDictionaries SELECT NameId FROM Forms WHERE Id = {0};
           DELETE FROM FieldOptions WHERE FieldId IN (SELECT Id FROM Fields WHERE FormId = {0});
           DELETE FROM Fields WHERE FormId = {0};
           DELETE FROM Forms WHERE Id = {0};
-          DELETE FROM Localizations WHERE DictionaryId IN (SELECT Id FROM #Dictionaries);
-          DELETE FROM Dictionaries WHERE Id IN (SELECT Id FROM #Dictionaries);
+          DELETE FROM Localizations WHERE DictionaryId IN (SELECT Id FROM TempDictionaries);
+          DELETE FROM Dictionaries WHERE Id IN (SELECT Id FROM TempDictionaries);
         ",
         form.Id
       );

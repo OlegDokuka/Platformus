@@ -13,6 +13,7 @@ module Platformus.Ui {
         menubar: "edit insert view format table tools",
         toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent | link image",
         statusbar: false,
+        convert_urls: false,
         file_browser_callback: showFileSelectorForm
       }
       );

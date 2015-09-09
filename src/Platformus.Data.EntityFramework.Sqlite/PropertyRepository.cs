@@ -44,11 +44,11 @@ namespace Platformus.Data.EntityFramework.Sqlite
     {
       this.dbContext.Database.ExecuteSqlCommand(
         @"
-          CREATE TABLE #Dictionaries (Id INT PRIMARY KEY);
-          INSERT INTO #Dictionaries SELECT HtmlId FROM Properties WHERE Id = {0};
+          CREATE TEMP TABLE TempDictionaries (Id INT PRIMARY KEY);
+          INSERT INTO TempDictionaries SELECT HtmlId FROM Properties WHERE Id = {0};
           DELETE FROM Properties WHERE Id = {0};
-          DELETE FROM Localizations WHERE DictionaryId IN (SELECT Id FROM #Dictionaries);
-          DELETE FROM Dictionaries WHERE Id IN (SELECT Id FROM #Dictionaries);
+          DELETE FROM Localizations WHERE DictionaryId IN (SELECT Id FROM TempDictionaries);
+          DELETE FROM Dictionaries WHERE Id IN (SELECT Id FROM TempDictionaries);
         ",
         property.Id
       );
