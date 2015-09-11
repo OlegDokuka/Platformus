@@ -1,7 +1,10 @@
 {
-  "authors": [ "Dmitry Sikorsky" ],
+  "authors": [
+    "Dmitry Sikorsky"
+  ],
   "commands": {
-    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
+    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000",
+    "kestrel": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --server.urls http://localhost:5001"
   },
   "dependencies": {
     "Microsoft.AspNet.Authentication.Cookies": "1.0.0-beta7",
@@ -19,7 +22,9 @@
     "Platformus.Data": "0.1.1",
     "Platformus.Data.EntityFramework.Sqlite": "0.1.1",
     "Platformus.Data.EntityFramework.SqlServer": "0.1.1",
-    "Platformus.Models": "0.1.1"
+    "Platformus.Models": "0.1.1",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta7"
+
   },
   "exclude": [
     "wwwroot",
@@ -27,7 +32,7 @@
     "bower_components"
   ],
   "frameworks": {
-    "dnx451": { },
+    "dnx451": {},
     "dnxcore50": {
       "dependencies": {
         "System.Runtime.Serialization.Primitives": "4.0.0"
