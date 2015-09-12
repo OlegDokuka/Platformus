@@ -3,7 +3,7 @@
   "version": 1,
   "targets": {
     "DNX,Version=v4.5.1": {
-      "Platformus.Models/0.1.1": {
+      "Platformus.Models/0.1.2": {
         "type": "project",
         "dependencies": {
           "System.Runtime": "4.0.0"
@@ -20,7 +20,7 @@
       }
     },
     "DNXCore,Version=v5.0": {
-      "Platformus.Models/0.1.1": {
+      "Platformus.Models/0.1.2": {
         "type": "project",
         "dependencies": {
           "System.Runtime": "4.0.0"
@@ -35,7 +35,7 @@
     }
   },
   "libraries": {
-    "Platformus.Models/0.1.1": {
+    "Platformus.Models/0.1.2": {
       "type": "project",
       "path": "../Platformus.Models/project.json"
     },
@@ -90,7 +90,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Platformus.Models >= 0.1.1",
+      "Platformus.Models >= 0.1.2",
       "System.Runtime >= 4.0.0"
     ],
     "DNX,Version=v4.5.1": [],

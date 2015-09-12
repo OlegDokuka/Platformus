@@ -1,4 +1,4 @@
-# Platformus 0.1.1
+# Platformus 0.1.2
 
 ## Introduction
 
