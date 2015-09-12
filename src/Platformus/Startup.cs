@@ -10,8 +10,8 @@ using Microsoft.Dnx.Runtime;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 using Platformus.Data;
-//using Platformus.Data.EntityFramework.Sqlite;
-using Platformus.Data.EntityFramework.SqlServer;
+using Platformus.Data.EntityFramework.Sqlite;
+//using Platformus.Data.EntityFramework.SqlServer;
 
 namespace Platformus
 {
