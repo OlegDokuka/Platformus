@@ -1,7 +1,6 @@
 .svn/
 .vs/
+src/Platformus/config.json
+src/Platformus/Properties/PublishProfiles
 *.licenseheader
-platformus.sqlite
 *.user
-src/Platformus/config.json
-src/Platformus/config.json
