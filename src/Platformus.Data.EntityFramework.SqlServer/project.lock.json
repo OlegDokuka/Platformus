@@ -270,14 +270,14 @@
           "lib/dnx451/Microsoft.Framework.OptionsModel.dll": {}
         }
       },
-      "Platformus.Data/0.1.1": {
+      "Platformus.Data/0.1.2": {
         "type": "project",
         "dependencies": {
-          "Platformus.Models": "0.1.1",
+          "Platformus.Models": "0.1.2",
           "System.Runtime": "4.0.0"
         }
       },
-      "Platformus.Models/0.1.1": {
+      "Platformus.Models/0.1.2": {
         "type": "project",
         "dependencies": {
           "System.Runtime": "4.0.0"
@@ -600,14 +600,14 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Platformus.Data/0.1.1": {
+      "Platformus.Data/0.1.2": {
         "type": "project",
         "dependencies": {
-          "Platformus.Models": "0.1.1",
+          "Platformus.Models": "0.1.2",
           "System.Runtime": "4.0.0"
         }
       },
-      "Platformus.Models/0.1.1": {
+      "Platformus.Models/0.1.2": {
         "type": "project",
         "dependencies": {
           "System.Runtime": "4.0.0"
@@ -1571,11 +1571,11 @@
     }
   },
   "libraries": {
-    "Platformus.Data/0.1.1": {
+    "Platformus.Data/0.1.2": {
       "type": "project",
       "path": "../Platformus.Data/project.json"
     },
-    "Platformus.Models/0.1.1": {
+    "Platformus.Models/0.1.2": {
       "type": "project",
       "path": "../Platformus.Models/project.json"
     },
@@ -3481,8 +3481,8 @@
   "projectFileDependencyGroups": {
     "": [
       "EntityFramework.SqlServer >= 7.0.0-beta7",
-      "Platformus.Data >= 0.1.1",
-      "Platformus.Models >= 0.1.1"
+      "Platformus.Data >= 0.1.2",
+      "Platformus.Models >= 0.1.2"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
